@@ -79,6 +79,7 @@ public class HTML5WebView extends WebView {
         s.setDomStorageEnabled(true);
 
         mContentView.addView(this);
+        Log.i(LOGTAG, "created webview");
     }
 
     public HTML5WebView(Context context) {
@@ -125,7 +126,7 @@ public class HTML5WebView extends WebView {
 
         @Override
         public void onShowCustomView(View view, WebChromeClient.CustomViewCallback callback) {
-            //Log.i(LOGTAG, "here in on ShowCustomView");
+            Log.i(LOGTAG, "here in on ShowCustomView");
             HTML5WebView.this.setVisibility(View.GONE);
 
             // if a view already exists then immediately terminate the new one
@@ -157,12 +158,12 @@ public class HTML5WebView extends WebView {
 
             HTML5WebView.this.setVisibility(View.VISIBLE);
 
-            //Log.i(LOGTAG, "set it to webVew");
+            Log.i(LOGTAG, "set it to webVew");
         }
 
         @Override
         public Bitmap getDefaultVideoPoster() {
-            //Log.i(LOGTAG, "here in on getDefaultVideoPoster");
+            Log.i(LOGTAG, "here in on getDefaultVideoPoster");
             if (mDefaultVideoPoster == null) {
                 mDefaultVideoPoster = BitmapFactory.decodeResource(
                         getResources(), R.drawable.default_video_poster);
@@ -172,7 +173,7 @@ public class HTML5WebView extends WebView {
 
         @Override
         public View getVideoLoadingProgressView() {
-            //Log.i(LOGTAG, "here in on getVideoLoadingPregressView");
+            Log.i(LOGTAG, "here in on getVideoLoadingPregressView");
 
             if (mVideoProgressView == null) {
                 LayoutInflater inflater = LayoutInflater.from(mContext);

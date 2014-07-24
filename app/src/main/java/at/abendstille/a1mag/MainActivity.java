@@ -25,6 +25,7 @@ public class MainActivity extends Activity {
         if (savedInstanceState != null) {
             webView.restoreState(savedInstanceState);
         } else {
+            //webView.loadUrl("http://192.168.0.120/alpha/");
             webView.loadUrl("file:///android_asset/index.html");
         }
 
