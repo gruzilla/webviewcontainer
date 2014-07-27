@@ -3,6 +3,7 @@ package at.abendstille.a1mag;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
@@ -37,6 +38,12 @@ public class MainActivity extends Activity {
         }
 
         setContentView(webView.getLayout());
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        webView.loadUrl("javascript:resumeFromExtern()");
     }
 
 

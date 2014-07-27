@@ -60,11 +60,11 @@ public class HTML5WebView extends WebView {
         s.setUseWideViewPort(true);
         s.setLoadWithOverviewMode(true);
         s.setSaveFormData(true);
-        s.setJavaScriptEnabled(true);
         s.setAppCacheEnabled(false);
         s.setJavaScriptCanOpenWindowsAutomatically(true);
         s.setLoadsImagesAutomatically(true);
         s.setMediaPlaybackRequiresUserGesture(false);
+        s.setJavaScriptEnabled(true);
 
         // allow local access and xhr to load local files
         s.setAllowFileAccess(true);
